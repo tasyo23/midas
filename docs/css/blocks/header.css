@@ -1,0 +1,42 @@
+.header__container {
+  padding-top: 50px;
+  padding-bottom: 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__btn-icon {
+  background: transparent;
+  border: 0;
+  margin-left: 37px;
+  margin-bottom: 7px;
+}
+
+.menu__wrap {
+  display: flex;
+  align-items: center;
+}
+.menu__wrap > li {
+  margin: -2px 22px 0;
+  position: relative;
+  padding: 8px 0;
+}
+.menu__wrap > li a {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.menu__wrap > li > span {
+  margin-left: 4px;
+}
+.menu__wrap > li ul {
+  position: absolute;
+  background: var(--main-bg-color);
+  padding: 8px;
+  border-radius: 4px;
+  top: 24px;
+  display: none;
+}
+.menu__wrap > li:hover ul {
+  display: block;
+}
