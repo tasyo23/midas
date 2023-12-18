@@ -11,7 +11,12 @@
     top: 175px;
     left: 20px;
   }
-
+  &__buttons-right {
+    position: absolute;
+    right: 0;
+    bottom: 181px;
+    z-index: 5;
+  }
   &__delivery {
     max-width: 312px;
     font-size: 25px;
@@ -42,7 +47,15 @@
   &__dish {
     margin-top: 283px;
   }
-
+  &__dish-main {
+    background: url("../img/dish-wrap.svg") no-repeat;
+    position: absolute;
+    width: 355.245px;
+    height: 357.933px;
+    top: 461px;
+    left: calc(50% - 289px);
+    padding: 35px 66px 35px 57px;
+  }
 }
 
 .dish {
@@ -59,14 +72,20 @@
     background: rgba(255, 255, 255, 0.3);
     padding: 2px 6px 3px;
     margin-top: 5px;
-    margin-bottom: 16px
+    margin-bottom: 16px;
   }
-
+  &__description {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+  }
   &__image {
     margin-left: -26px;
     margin-bottom: -2px;
   }
-
 
   &__bottom {
     display: flex;
@@ -76,12 +95,16 @@
   &__price {
     font-size: 23px;
     font-weight: 800;
-    margin-right: 37px;
+    margin-right: 18px;
+    min-width: 87px;
   }
 
   &__in-basket {
     width: 42px;
     height: 42px;
-    background: #FBD13E;
+    background: #fbd13e;
+  }
+  &__name_banner {
+    font-size: 25px;
   }
 }
