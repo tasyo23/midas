@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "prettier",
+    "stylelint-config-prettier-scss",
+    "stylelint-config-idiomatic-order",
+    "./node_modules/prettier-stylelint/config.js"
+  ]
+}

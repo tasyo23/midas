@@ -1,0 +1,22 @@
+@use "../../node_modules/scss-reset/reset";
+@import "var";
+@import "stylesheet";
+
+body,p,a,ul,li{
+font-family: Montserrat, sans-serif;
+  color: var(--main-text-color);
+}
+a{
+  text-decoration: none;
+}
+
+.container{
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 69px;
+}
+.wrapper{
+  background:var(--main-bg-color) url("../img/bg.png") no-repeat;
+}
+
+@import "./blocks/header";

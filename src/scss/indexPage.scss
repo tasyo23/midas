@@ -1,0 +1,87 @@
+.banner {
+  position: relative;
+
+  &__container {
+    padding-top: 52px;
+    position: relative;
+  }
+
+  &__buttons-left {
+    position: absolute;
+    top: 175px;
+    left: 20px;
+  }
+
+  &__delivery {
+    max-width: 312px;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 250px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 360px);
+  }
+
+  &__phone {
+    display: block;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 7px;
+  }
+
+  &__email {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration-line: underline;
+    display: block;
+  }
+
+  &__dish {
+    margin-top: 283px;
+  }
+
+}
+
+.dish {
+  &__name {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__weight {
+    display: inline-flex;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 2px 6px 3px;
+    margin-top: 5px;
+    margin-bottom: 16px
+  }
+
+  &__image {
+    margin-left: -26px;
+    margin-bottom: -2px;
+  }
+
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 23px;
+    font-weight: 800;
+    margin-right: 37px;
+  }
+
+  &__in-basket {
+    width: 42px;
+    height: 42px;
+    background: #FBD13E;
+  }
+}
