@@ -49,7 +49,9 @@ function html() {
 
 function buildStyles() {
   return src("./src/scss/**/*.scss")
+    .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(dest("./docs/css"));
 }
 
@@ -77,7 +79,6 @@ function img() {
   return src(["./src/img/*.*", "!./src/*.svg"])
     .pipe(webp())
     .pipe(src("src/img/*.*"))
-
     .pipe(dest("./docs/img"));
 }
 

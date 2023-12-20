@@ -1,0 +1,87 @@
+.dish {
+  &__name {
+    font-size: 20px;
+    font-weight: 500;
+    height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__weight {
+    display: inline-flex;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 2px 6px 3px;
+    margin-top: 5px;
+    margin-bottom: 16px;
+  }
+  &__description {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+  }
+  &_list {
+    .dish__description {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 18px;
+    }
+  }
+  &__image {
+    margin-left: -26px;
+    margin-bottom: -2px;
+
+  }
+  &__image-list {
+    margin-bottom: 15px;
+    picture{
+      width: 100%;
+
+    }
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 23px;
+    font-weight: 800;
+    margin-right: 18px;
+    min-width: 87px;
+    span{display:block}
+
+    &_old {
+      text-decoration: line-through;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: -7px;
+    }
+    &_min{
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: -7px;
+    }
+  }
+&__btn-var{
+  width: 130px;
+}
+  &__in-basket {
+    width: 42px;
+    height: 42px;
+    background: #fbd13e;
+  }
+  &__name_banner {
+    font-size: 25px;
+  }
+}
+

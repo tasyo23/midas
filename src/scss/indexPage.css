@@ -1,3 +1,249 @@
+@charset "UTF-8";
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir=rtl] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+[dir=rtl] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+.slick-prev:before {
+  content: "←";
+}
+[dir=rtl] .slick-prev:before {
+  content: "→";
+}
+
+.slick-next {
+  right: -25px;
+}
+[dir=rtl] .slick-next {
+  left: -25px;
+  right: auto;
+}
+.slick-next:before {
+  content: "→";
+}
+[dir=rtl] .slick-next:before {
+  content: "←";
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
+}
+
 .banner {
   position: relative;
 }
@@ -27,6 +273,9 @@
   top: 0;
   left: calc(50% - 360px);
 }
+.banner__image img {
+  max-width: unset;
+}
 .banner__phone {
   display: block;
   font-size: 25px;
@@ -42,6 +291,9 @@
 .banner__dish {
   margin-top: 283px;
 }
+.banner__dish .dish__name {
+  height: auto;
+}
 .banner__dish-main {
   background: url("../img/dish-wrap.svg") no-repeat;
   position: absolute;
@@ -52,9 +304,89 @@
   padding: 35px 66px 35px 57px;
 }
 
+.popular {
+  margin-top: -49px;
+  margin-bottom: 138px;
+}
+.popular__container {
+  padding-right: 50px;
+}
+.popular__header {
+  max-width: 640px;
+  margin-left: calc(50% - 246px);
+  margin-bottom: 55px;
+}
+.popular__products {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+}
+
+.product-menu {
+  margin-top: 105px;
+  margin-bottom: 169px;
+}
+.product-menu__header {
+  padding-left: 10px;
+  margin-bottom: 64px;
+}
+.product-menu__item {
+  height: 314px;
+  background: #000;
+  width: 233px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0 10px;
+}
+.product-menu__item:hover {
+  background: #09234e;
+}
+.product-menu__item-name {
+  font-size: 20px;
+  font-weight: 500;
+  max-width: 159px;
+  text-align: center;
+  margin: 0 auto;
+}
+.product-menu__item-stock {
+  background: var(--red-color);
+}
+.product-menu__item-stock:hover {
+  background: var(--red-color);
+}
+.product-menu__item-stock__arrow_next {
+  right: 0;
+}
+.product-menu__item-percent {
+  color: #0f0f11;
+  text-align: center;
+  font-size: 78px;
+}
+.product-menu__item-percent-header {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex !important;
+  font-weight: 500;
+  max-width: 140px;
+  text-align: center;
+  margin: 0 auto;
+}
+.product-menu__item-stock {
+  padding-bottom: 10px;
+}
+
 .dish__name {
   font-size: 20px;
   font-weight: 500;
+  height: 48px;
+  display: flex;
+  align-items: center;
 }
 .dish__weight {
   display: inline-flex;
@@ -74,9 +406,23 @@
   margin-bottom: 20px;
   margin-top: -10px;
 }
+.dish_list .dish__description {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+}
 .dish__image {
   margin-left: -26px;
   margin-bottom: -2px;
+}
+.dish__image-list {
+  margin-bottom: 15px;
+}
+.dish__image-list picture {
+  width: 100%;
+}
+.dish__image-list img {
+  width: 100%;
 }
 .dish__bottom {
   display: flex;
@@ -88,6 +434,23 @@
   margin-right: 18px;
   min-width: 87px;
 }
+.dish__price span {
+  display: block;
+}
+.dish__price_old {
+  text-decoration: line-through;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: -7px;
+}
+.dish__price_min {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: -7px;
+}
+.dish__btn-var {
+  width: 130px;
+}
 .dish__in-basket {
   width: 42px;
   height: 42px;
@@ -95,6 +458,23 @@
 }
 .dish__name_banner {
   font-size: 25px;
+}
+
+@media screen and (max-width: 1560px) {
+  .banner__image {
+    left: 400px;
+  }
+  .banner__dish-main {
+    left: 466px;
+  }
+  .banner__buttons-right {
+    right: calc(50% - 750px);
+  }
+  .popular__products {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+  }
 }
 
 /*# sourceMappingURL=indexPage.css.map */
