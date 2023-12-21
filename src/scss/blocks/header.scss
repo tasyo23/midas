@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 20;
-  background: var(--main-bg-color) url("../../img/bg.webp") no-repeat;
+  background: var(--main-bg-color) url('../img/bg.webp') no-repeat;
   &__mobile-menu-btn {
     display: none;
   }
