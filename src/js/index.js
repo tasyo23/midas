@@ -12,8 +12,17 @@ function addMenuArrow() {
   });
 }
 
-addMenuArrow();
+function showMobileMenu() {
+  $(".header__mobile-menu-btn").click(() => {
+    $(".mobile-menu").toggleClass("mobile-menu_show");
+    console.log($(".burger"));
+    $(".burger").toggleClass("burger_show");
+  });
+}
 
+showMobileMenu();
+
+addMenuArrow();
 $(".slider").slick({
   infinite: true,
   slidesToShow: 6,

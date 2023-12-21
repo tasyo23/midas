@@ -1,5 +1,9 @@
 .header {
-  &__mobile-menu-btn{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--main-bg-color) url("../../img/bg.webp") no-repeat;
+  &__mobile-menu-btn {
     display: none;
   }
   &__container {
@@ -17,10 +21,10 @@
     margin-left: 37px;
     margin-bottom: 7px;
   }
-
-
 }
-
+.mobile-menu {
+  display: none;
+}
 .menu {
   &__wrap {
     display: flex;
@@ -55,55 +59,198 @@
         display: block;
       }
     }
-
   }
 }
+.stock {
+  padding-bottom: 10px;
+  background: var(--red-color) !important;
+  &:hover {
+    background: var(--red-color) !important;
+  }
+  &__item-percent {
+    color: #0f0f11;
+    text-align: center;
+    font-size: 78px;
+  }
+  &__item-percent-header {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex !important;
+    font-weight: 500;
+    max-width: 140px;
+    text-align: center;
+    margin: 0 auto;
+  }
 
+  &__item-stock {
+    padding-bottom: 10px;
+  }
+}
 @media screen and (max-width: 1280px) {
-  .menu{
-    &__wrap{
-      li{
+  .menu {
+    &__wrap {
+      li {
         margin: -2px 15px 0;
       }
-      li:last-child{
+      li:last-child {
         margin-right: 0;
       }
     }
   }
-
 }
-
-@media screen and (max-width: 1140px) {
-.header{
-  &__logo-wrap{
-    display: flex;
+.burger {
+  &_open {
+    display: none;
   }
-  &__container {
-    padding-left:20px;
-    padding-right: 40px;
+  &__wrap {
+    width: 37px;
+    height: 16px;
+    position: relative;
+    margin-left: 0 !important;
+    span {
+      width: 100%;
+      height: 2px;
+      display: block;
+      background: #fff;
+      position: absolute;
+      margin-left: 0 !important;
+      transition: ease-in-out all 0.5s;
+    }
+    span:nth-child(1) {
+      top: 0px;
+    }
+    span:nth-child(2) {
+      bottom: 7px;
+    }
+    span:nth-child(3) {
+      top: 14px;
+    }
   }
-  &__mobile-menu-btn{
-    display: flex;
-    color: #ffffff;
-    align-items: center;
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-left: 81px;
-    span{
-      margin-left: 12px;
+  &_show {
+    span {
+      color: #fbd13e;
+    }
+    .burger__wrap {
+      span {
+        background: #fbd13e;
+        transition: ease-in-out all 0.5s;
+      }
+      span:nth-child(1) {
+        top: 8px;
+        transform: rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 8px;
+      }
+    }
+    .burger_open {
+      display: block;
+    }
+    .burger_close {
+      display: none;
     }
   }
 }
-  .menu{
+@media screen and (max-width: 1140px) {
+  .header {
+    &__logo-wrap {
+      display: flex;
+    }
+    &__container {
+      padding-left: 20px;
+      padding-right: 40px;
+    }
+    &__mobile-menu-btn {
+      display: flex;
+      color: #ffffff;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-left: 81px;
+      span {
+        margin-left: 12px;
+      }
+    }
+  }
+  .mobile-menu {
+    &_show {
+      top: 125px;
+      transition: ease-in-out top 0.5s;
+    }
+    top: -120%;
+    display: block;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 68px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(25px);
+    transition: ease-in-out top 0.5s;
+    &__container {
+      padding: 68px 20px;
+      display: flex;
+    }
+    &__stock {
+      width: 195px;
+      height: 291px;
+      margin-right: 70px;
+    }
+    &__item {
+      margin-bottom: 37px;
+    }
+    &__categories {
+      &_col {
+        column-count: 2;
+        column-gap: 100px;
+      }
+    }
+    &__category {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      img {
+        height: 68px;
+        width: 68px;
+      }
+    }
+    &__item-header {
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 21px;
+      margin-left: 110px;
+    }
+    &__category-name {
+      margin-left: 38px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  .menu {
     display: none;
     position: absolute;
     background: var(--main-bg-color);
     z-index: 7;
     top: 81px;
     left: 277px;
-    &__wrap{
+    &__wrap {
       flex-direction: column;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header{
+    &__container{
+      padding-right: 35px;
     }
   }
 }

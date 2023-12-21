@@ -246,6 +246,7 @@
 
 .banner {
   position: relative;
+  overflow: hidden;
 }
 .banner__container {
   padding-top: 52px;
@@ -351,34 +352,6 @@
   max-width: 159px;
   text-align: center;
   margin: 0 auto;
-}
-.product-menu__item-stock {
-  background: var(--red-color);
-}
-.product-menu__item-stock:hover {
-  background: var(--red-color);
-}
-.product-menu__item-stock__arrow_next {
-  right: 0;
-}
-.product-menu__item-percent {
-  color: #0f0f11;
-  text-align: center;
-  font-size: 78px;
-}
-.product-menu__item-percent-header {
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-  text-transform: uppercase;
-  display: flex !important;
-  font-weight: 500;
-  max-width: 140px;
-  text-align: center;
-  margin: 0 auto;
-}
-.product-menu__item-stock {
-  padding-bottom: 10px;
 }
 
 .dish__name {
@@ -536,6 +509,27 @@
   }
   .product-menu__header {
     margin-left: calc(50% - 255px);
+  }
+}
+@media screen and (max-width: 1023px) {
+  .banner__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 36px;
+  }
+  .banner__contacts {
+    text-align: right;
+  }
+  .banner__image {
+    position: relative;
+    padding: 0 20px;
+    left: 0;
+  }
+  .banner__dish {
+    display: none;
+  }
+  .banner__delivery {
+    margin-bottom: 54px;
   }
 }
 
