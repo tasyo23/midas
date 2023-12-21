@@ -1,31 +1,43 @@
 <header>
     <div class="header__container container">
-        <a href="/" aria-label="Логотип"><img src="./img/logo.svg" alt=""></a>
+        <div class="header__logo-wrap">
+            <a href="/" aria-label="Логотип"><img src="./img/logo.svg" alt=""></a>
+            <button class="header__mobile-menu-btn">
+                <svg width="37" height="16" viewBox="0 0 37 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H37V2H0V0Z" fill="white"/>
+                    <path d="M0 7H37V9H0V7Z" fill="white"/>
+                    <path d="M0 14H37V16H0V14Z" fill="white"/>
+                </svg>
+                <span>МЕНЮ</span>
+            </button>
+        </div>
+
         <nav class="menu header__menu">
             <ul class="menu__wrap">
                 <li><a href="#">АКЦИИ<img src="./img/fire.svg" alt="fire"></a></li>
                 <li><a href="#">ГОРЯЧЕЕ</a>
-                <ul>
-                    <li><a href="#">ГОРЯЧЕЕ</a></li>
-                    <li><a href="#">ГОРЯЧЕЕ</a></li>
-                    <li><a href="#">ГОРЯЧЕЕ</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="#">ГОРЯЧЕЕ</a></li>
+                        <li><a href="#">ГОРЯЧЕЕ</a></li>
+                        <li><a href="#">ГОРЯЧЕЕ</a></li>
+                    </ul>
                 </li>
                 <li><a href="#">ХОЛОДНОЕ</a>
                     <ul>
                         <li><a href="#">ГОРЯЧЕЕ</a></li>
                         <li><a href="#">ХОЛОДНОЕ</a></li>
                         <li><a href="#">ГОРЯЧЕЕ</a></li>
-                    </ul></li>
+                    </ul>
+                </li>
                 <li><a href="#">СВЕЖАЯ ВЫПЕЧКА</a></li>
                 <li><a href="#">ДЕСЕРТЫ</a></li>
                 <li><a href="#">НАПИТКИ</a></li>
             </ul>
         </nav>
-<div class="header__right">
-    <button class="header__btn-icon"><img src="./img/search.svg" alt="search"></button>
-    <button class="header__btn-icon"><img src="./img/user.svg" alt="user"></button>
-    <button class="header__btn-icon"><img src="./img/basket.svg" alt="basket"></button>
-</div>
+        <div class="header__right">
+            <button class="header__btn-icon"><img src="./img/search.svg" alt="search"></button>
+            <button class="header__btn-icon"><img src="./img/user.svg" alt="user"></button>
+            <button class="header__btn-icon"><img src="./img/basket.svg" alt="basket"></button>
+        </div>
     </div>
 </header>

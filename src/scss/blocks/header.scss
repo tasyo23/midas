@@ -1,10 +1,14 @@
 .header {
+  &__mobile-menu-btn{
+    display: none;
+  }
   &__container {
     padding-top: 50px;
     padding-bottom: 43px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
 
   &__btn-icon {
@@ -44,6 +48,7 @@
         border-radius: 4px;
         top: 24px;
         display: none;
+        z-index: 9;
       }
 
       &:hover ul {
@@ -54,3 +59,51 @@
   }
 }
 
+@media screen and (max-width: 1280px) {
+  .menu{
+    &__wrap{
+      li{
+        margin: -2px 15px 0;
+      }
+      li:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1140px) {
+.header{
+  &__logo-wrap{
+    display: flex;
+  }
+  &__container {
+    padding-left:20px;
+    padding-right: 40px;
+  }
+  &__mobile-menu-btn{
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 81px;
+    span{
+      margin-left: 12px;
+    }
+  }
+}
+  .menu{
+    display: none;
+    position: absolute;
+    background: var(--main-bg-color);
+    z-index: 7;
+    top: 81px;
+    left: 277px;
+    &__wrap{
+      flex-direction: column;
+    }
+  }
+}

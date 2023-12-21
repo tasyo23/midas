@@ -259,7 +259,7 @@
 .banner__buttons-right {
   position: absolute;
   right: 0;
-  bottom: 181px;
+  bottom: -470px;
   z-index: 5;
 }
 .banner__delivery {
@@ -417,12 +417,15 @@
 }
 .dish__image-list {
   margin-bottom: 15px;
+  height: 233px;
 }
 .dish__image-list picture {
   width: 100%;
+  height: 100%;
 }
 .dish__image-list img {
   width: 100%;
+  height: 100%;
 }
 .dish__bottom {
   display: flex;
@@ -473,7 +476,66 @@
   .popular__products {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 20px;
-    grid-row-gap: 40px;
+    grid-row-gap: 42px;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .banner__image {
+    height: 640px;
+    left: 395px;
+  }
+  .banner__image picture {
+    height: 100%;
+  }
+  .banner__image img {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+  .banner__buttons-left {
+    position: absolute;
+    top: 175px;
+    left: -28px;
+  }
+  .banner__delivery {
+    margin-bottom: 254px;
+  }
+  .banner__dish-main {
+    left: 445px;
+    top: 478px;
+    padding-top: 42px;
+  }
+  .banner__dish-main .dish__name {
+    margin-bottom: 5px;
+  }
+  .banner__dish {
+    margin-top: 236px;
+  }
+  .banner__buttons-right {
+    right: calc(50% - 662px);
+    bottom: -458px;
+  }
+  .dish__image {
+    margin-left: -11px;
+    margin-bottom: -2px;
+  }
+  .popular {
+    margin-top: 40px;
+    margin-bottom: 138px;
+  }
+  .popular__header {
+    margin-bottom: 50px;
+  }
+  .popular__container {
+    padding-right: 20px;
+  }
+  .product-menu {
+    margin-top: 169px;
+    margin-bottom: 169px;
+  }
+  .product-menu__header {
+    margin-left: calc(50% - 255px);
   }
 }
 

@@ -1,61 +1,79 @@
-.footer{
+.footer {
   background: #000;
-  &__top{
+  &__top {
     padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
-  &__container{
+  &__container {
     padding-right: 50px;
   }
-  &__logo{
+  &__logo {
     margin-right: 93px;
     width: 135px;
     height: 24px;
   }
-  &__menu-wrap{
+  &__menu-wrap {
     display: flex;
-    li{
-      margin: 0 25px ;
-      a{
+    li {
+      margin: 0 25px;
+      a {
         text-decoration: underline;
         font-size: 12px;
         font-weight: 500;
-        &:hover{
-
+        &:hover {
         }
       }
     }
   }
-  &__left{
+  &__left {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
   }
-  &__phone{
+  &__phone {
     font-size: 20px;
     font-weight: 500;
   }
-  &__email{
+  &__email {
     font-size: 12px;
     font-weight: 500;
     margin-left: 29px;
     text-decoration: underline;
   }
-  &__bottom{
+  &__bottom {
     font-size: 12px;
     font-weight: 500;
     display: flex;
     justify-content: space-between;
-    padding-top: 14px;
+    padding-top: 28px;
     padding-bottom: 35px;
   }
-  &__bottom-right{
-    a{
+  &__bottom-right {
+    a {
       text-decoration: underline;
       margin-left: 45px;
+    }
+  }
+}
+@media screen and (max-width: 1140px) {
+  .footer {
+    &__container {
+      padding-right: 20px;
+    }
+    &__top {
+      padding-bottom: 36px;
+    }
+    &__logo {
+      width: 135px;
+      margin-right: 43px;
+    }
+    &__menu-wrap {
+      li {
+        margin: 0 15px;
+      }
     }
   }
 }

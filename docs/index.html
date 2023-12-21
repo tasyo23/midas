@@ -11,33 +11,45 @@
     <div class="wrapper">
       <header>
     <div class="header__container container">
-        <a href="/" aria-label="Логотип"><img src="./img/logo.svg" alt=""></a>
+        <div class="header__logo-wrap">
+            <a href="/" aria-label="Логотип"><img src="./img/logo.svg" alt=""></a>
+            <button class="header__mobile-menu-btn">
+                <svg width="37" height="16" viewBox="0 0 37 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H37V2H0V0Z" fill="white"/>
+                    <path d="M0 7H37V9H0V7Z" fill="white"/>
+                    <path d="M0 14H37V16H0V14Z" fill="white"/>
+                </svg>
+                <span>МЕНЮ</span>
+            </button>
+        </div>
+
         <nav class="menu header__menu">
             <ul class="menu__wrap">
                 <li><a href="#">АКЦИИ<img src="./img/fire.svg" alt="fire"></a></li>
                 <li><a href="#">ГОРЯЧЕЕ</a>
-                <ul>
-                    <li><a href="#">ГОРЯЧЕЕ</a></li>
-                    <li><a href="#">ГОРЯЧЕЕ</a></li>
-                    <li><a href="#">ГОРЯЧЕЕ</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="#">ГОРЯЧЕЕ</a></li>
+                        <li><a href="#">ГОРЯЧЕЕ</a></li>
+                        <li><a href="#">ГОРЯЧЕЕ</a></li>
+                    </ul>
                 </li>
                 <li><a href="#">ХОЛОДНОЕ</a>
                     <ul>
                         <li><a href="#">ГОРЯЧЕЕ</a></li>
                         <li><a href="#">ХОЛОДНОЕ</a></li>
                         <li><a href="#">ГОРЯЧЕЕ</a></li>
-                    </ul></li>
+                    </ul>
+                </li>
                 <li><a href="#">СВЕЖАЯ ВЫПЕЧКА</a></li>
                 <li><a href="#">ДЕСЕРТЫ</a></li>
                 <li><a href="#">НАПИТКИ</a></li>
             </ul>
         </nav>
-<div class="header__right">
-    <button class="header__btn-icon"><img src="./img/search.svg" alt="search"></button>
-    <button class="header__btn-icon"><img src="./img/user.svg" alt="user"></button>
-    <button class="header__btn-icon"><img src="./img/basket.svg" alt="basket"></button>
-</div>
+        <div class="header__right">
+            <button class="header__btn-icon"><img src="./img/search.svg" alt="search"></button>
+            <button class="header__btn-icon"><img src="./img/user.svg" alt="user"></button>
+            <button class="header__btn-icon"><img src="./img/basket.svg" alt="basket"></button>
+        </div>
     </div>
 </header>
 
@@ -62,10 +74,28 @@
               width="273px"
             />
           </div>
-          <a href="tel:74998416729" class="banner__phone">+7 (499) 841-67-29</a>
-          <a href="mailto:delivery@midas.rest" class="banner__email"
-            >delivery@midas.rest</a
-          >
+          <div>
+            <a href="tel:74998416729" class="banner__phone"
+              >+7 (499) 841-67-29</a
+            >
+            <a href="mailto:delivery@midas.rest" class="banner__email"
+              >delivery@midas.rest</a
+            >
+          </div>
+        </div>
+        <div class="banner__image">
+          <picture>
+            <source type="image/webp" srcset="./img/banner.webp" />
+            <source type="image/jpeg" srcset="./img/banner.jpg" />
+            <img
+              src="./img/banner.jpg"
+              alt="Изображение"
+              height="680px"
+              width="1170px"
+            />
+          </picture>
+        </div>
+        <div class="container">
           <div class="banner__dish dish">
             <div class="dish__image">
               <picture>
@@ -112,18 +142,7 @@
             </div>
           </div>
         </div>
-        <div class="banner__image">
-          <picture>
-            <source type="image/webp" srcset="./img/banner.webp" />
-            <source type="image/jpeg" srcset="./img/banner.jpg" />
-            <img
-              src="./img/banner.jpg"
-              alt="Изображение"
-              height="680px"
-              width="1170px"
-            />
-          </picture>
-        </div>
+
         <div class="banner__dish-main dish">
           <p class="dish__name dish__name_banner">Стейк из лосося с овощами</p>
           <p class="dish__weight">250 г</p>
@@ -174,8 +193,8 @@
                   <img
                     src="./img/product1.png"
                     alt="Хачапури по-аджарски"
-                    width="233"
-                    height="233"
+                    width="233px"
+                    height="233px"
                   />
                 </picture>
               </div>
@@ -223,8 +242,8 @@
                   <img
                     src="./img/product2.png"
                     alt="Хинкали традиционные (6шт)"
-                    height="233"
-                    width="233"
+                    height="233px"
+                    width="233px"
                   />
                 </picture>
               </div>
@@ -274,8 +293,8 @@
                   <img
                     src="./img/product3.png"
                     alt="Хинкали традиционные (6шт)"
-                    width="233"
-                    height="233"
+                    width="233px"
+                    height="233px"
                   />
                 </picture>
               </div>
@@ -325,8 +344,8 @@
                   <img
                     src="./img/product4.png"
                     alt="Ланч низкокалорийный"
-                    width="233"
-                    height="233"
+                    width="233px"
+                    height="233px"
                   />
                 </picture>
               </div>
@@ -377,8 +396,8 @@
                   <img
                     src="./img/product5.png"
                     alt="Хачапури по-мегрельски"
-                    height="233"
-                    width="233"
+                    height="233px"
+                    width="233px"
                   />
                 </picture>
               </div>
@@ -427,8 +446,8 @@
                   <img
                     src="./img/product6.png"
                     alt="Котлета с картофелем по-деревенски"
-                    height="233"
-                    width="233"
+                    height="233px"
+                    width="233px"
                   />
                 </picture>
               </div>
@@ -459,8 +478,8 @@
                   <img
                     src="./img/product7.png"
                     alt="Хинкали традиционные (6шт)"
-                    height="233"
-                    width="233"
+                    height="233px"
+                    width="233px"
                   />
                 </picture>
               </div>
@@ -510,8 +529,8 @@
                   <img
                     src="./img/product8.png"
                     alt="Хачапури по-аджарски"
-                    width="233"
-                    height="233"
+                    width="233px"
+                    height="233px"
                   />
                 </picture>
               </div>
@@ -559,8 +578,8 @@
                   <img
                     src="./img/product9.png"
                     alt="Хачапури по-аджарски"
-                    height="233"
-                    width="233"
+                    height="233px"
+                    width="233px"
                   />
                 </picture>
               </div>
@@ -608,8 +627,8 @@
                   <img
                     src="./img/product10.png"
                     alt="Котлета с картофелем по-деревенски"
-                    height="233"
-                    width="233"
+                    height="233px"
+                    width="233px"
                   />
                 </picture>
               </div>
@@ -637,8 +656,8 @@
                   <img
                     src="./img/product11.png"
                     alt="Хинкали традиционные (6шт)"
-                    height="233"
-                    width="233"
+                    height="233px"
+                    width="233px"
                   />
                 </picture>
               </div>
@@ -688,8 +707,8 @@
                   <img
                     src="./img/product12.png"
                     alt="Хинкали традиционные (6шт)"
-                    height="233"
-                    width="233"
+                    height="233px"
+                    width="233px"
                   />
                 </picture>
               </div>
@@ -801,7 +820,7 @@
               <picture>
                 <source type="image/webp" srcset="./img/menu51.webp" />
                 <source type="image/jpeg" srcset="./img/menu51.png" />
-                <img src="./img/menu51.png" alt="Салаты" />
+                <img src="./img/menu451.png" alt="Салаты" />
               </picture>
               <p class="product-menu__item-name">Салаты</p>
               <picture>

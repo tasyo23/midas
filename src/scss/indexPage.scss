@@ -16,7 +16,7 @@
   &__buttons-right {
     position: absolute;
     right: 0;
-    bottom: 181px;
+    bottom: -470px;
     z-index: 5;
   }
   &__delivery {
@@ -51,7 +51,7 @@
 
   &__dish {
     margin-top: 283px;
-    & .dish__name{
+    & .dish__name {
       height: auto;
     }
   }
@@ -162,7 +162,79 @@
     &__products {
       grid-template-columns: repeat(4, 1fr);
       grid-column-gap: 20px;
-      grid-row-gap: 40px;
+      grid-row-gap: 42px;
+    }
+  }
+}
+@media screen and (max-width: 1140px) {
+  .banner {
+    &__image {
+      //position: static;
+      height: 640px;
+      left: 395px;
+
+      picture {
+        height: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__buttons-left {
+      position: absolute;
+      top: 175px;
+      left: -28px;
+    }
+
+    &__delivery {
+      margin-bottom: 254px;
+    }
+
+    &__dish-main {
+      left: 445px;
+      top: 478px;
+      padding-top: 42px;
+
+      .dish__name {
+        margin-bottom: 5px;
+      }
+    }
+
+    &__dish {
+      margin-top: 236px;
+    }
+
+    &__buttons-right {
+      right: calc(50% - 662px);
+      bottom: -458px;
+    }
+  }
+  .dish {
+    &__image {
+      margin-left: -11px;
+      margin-bottom: -2px;
+    }
+  }
+  .popular {
+    margin-top: 40px;
+    margin-bottom: 138px;
+    &__header {
+      margin-bottom: 50px;
+    }
+    &__container {
+      padding-right: 20px;
+    }
+  }
+  .product-menu {
+    margin-top: 169px;
+    margin-bottom: 169px;
+    &__header{
+      margin-left: calc(50% - 255px);
     }
   }
 }

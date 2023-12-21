@@ -52,12 +52,8 @@ h2,
   overflow: hidden;
 }
 
-
-@import "./blocks/header";
-@import "./blocks/footer";
-
-.slider{
-  &__arrow{
+.slider {
+  &__arrow {
     height: 56px;
     width: 56px;
     border: 1px solid #fff;
@@ -68,15 +64,46 @@ h2,
     padding: 0;
     position: absolute;
     top: -138px;
-    &_next{
+    &_next {
       right: -20px;
-
     }
-    &_prev{
+    &_prev {
       right: 80px;
     }
-    path{
+    path {
       fill: #fff;
     }
   }
 }
+
+@media screen and (max-width: 1560px){
+  .container {
+    padding: 0 40px;
+  }
+  .slider{
+    &__arrow_next {
+      right: 0;
+    }
+    &__arrow_prev {
+      right: 98px;
+    }
+    &__arrow{
+      top: -128px;
+    }
+  }
+
+}
+@media screen and (max-width: 1280px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 1140px){
+  .container {
+    padding: 0 20px;
+  }
+}
+
+
+@import "./blocks/header";
+@import "./blocks/footer";
