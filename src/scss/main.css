@@ -746,6 +746,17 @@ h2,
     padding: 0 20px;
   }
 }
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+  h2,
+  .h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 45px;
+  }
+}
 .header {
   position: sticky;
   top: 0;
@@ -981,6 +992,42 @@ h2,
   .header__container {
     padding-right: 35px;
   }
+  .mobile-menu__categories_col {
+    column-count: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__container {
+    padding: 17px 20px 12px 15px;
+  }
+  .header__btn-icon {
+    margin-top: 2px;
+    margin-left: 0;
+  }
+  .header__btn-icon:last-child {
+    margin-left: 33px;
+  }
+  .header__btn-icon_search {
+    display: none;
+  }
+  .header__mobile-menu-btn {
+    margin-left: 58px;
+  }
+  .header__logo-wrap a {
+    width: 88px;
+  }
+  .header__logo-wrap a img {
+    max-width: 100%;
+  }
+  .burger_close, .burger_open {
+    display: none;
+  }
+  .mobile-menu__stock {
+    display: none;
+  }
+  .mobile-menu_show {
+    top: 64px;
+  }
 }
 .footer {
   background: #000;
@@ -1011,6 +1058,10 @@ h2,
   text-decoration: underline;
   font-size: 12px;
   font-weight: 500;
+}
+.footer__right {
+  flex-grow: 1;
+  text-align: right;
 }
 .footer__left {
   display: flex;
@@ -1052,6 +1103,52 @@ h2,
   }
   .footer__menu-wrap li {
     margin: 0 15px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .footer__left {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .footer__menu {
+    order: 5;
+    width: 100%;
+  }
+  .footer__menu-wrap {
+    margin-top: 33px;
+  }
+  .footer__menu-wrap li:first-child {
+    margin-left: 0;
+  }
+  .footer__top {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .footer__bottom {
+    display: block;
+  }
+  .footer__bottom-right {
+    margin-top: 23px;
+  }
+  .footer__bottom-right a {
+    margin-right: 48px;
+    margin-left: 0;
+  }
+  .footer__right {
+    text-align: right;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__logo {
+    width: 100%;
+    margin-bottom: 21px;
+    display: block;
+  }
+  .footer__logo img {
+    max-height: 100%;
+  }
+  .footer__right {
+    text-align: left;
   }
 }
 

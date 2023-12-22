@@ -399,6 +399,7 @@
 .dish__image-list img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .dish__bottom {
   display: flex;
@@ -436,6 +437,50 @@
   font-size: 25px;
 }
 
+@media screen and (max-width: 767px) {
+  .dish__image-list {
+    height: 157px;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .dish__name {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .dish__description {
+    display: none;
+  }
+  .dish__container {
+    padding-right: 16px;
+  }
+  .dish__btn-var {
+    letter-spacing: unset;
+    padding: 4px;
+    width: unset;
+    font-size: 10px;
+  }
+  .dish__weight {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 4px 3px;
+    margin-bottom: 5px;
+  }
+  .dish__price_old {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .dish__price {
+    font-size: 17px;
+    font-weight: 800;
+    min-width: 70px;
+    margin-right: 10px;
+  }
+  .dish .dish__in-basket {
+    width: 38px;
+    height: 38px;
+    background: #fbd13e;
+  }
+}
 @media screen and (max-width: 1560px) {
   .banner__image {
     left: 400px;
@@ -512,6 +557,9 @@
   }
 }
 @media screen and (max-width: 1023px) {
+  .banner {
+    padding-bottom: 100px;
+  }
   .banner__container {
     display: flex;
     justify-content: space-between;
@@ -530,6 +578,57 @@
   }
   .banner__delivery {
     margin-bottom: 54px;
+  }
+  .banner__dish-main {
+    left: 27px;
+    top: 567px;
+    padding-top: 42px;
+  }
+  .popular {
+    margin-top: 170px;
+  }
+  .popular__products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .popular__header {
+    margin-left: 0;
+  }
+  .popular__container {
+    padding-right: 26px;
+  }
+  .product-menu__container {
+    padding-left: 25px;
+  }
+  .product-menu__header {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .product-menu__item {
+    width: unset;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner {
+    padding-bottom: 0;
+  }
+  .banner__contacts, .banner__image, .banner__buttons-left, .banner__buttons-right {
+    display: none;
+  }
+  .banner.banner__container {
+    padding-top: 42px;
+  }
+  .popular {
+    margin-top: 25px;
+  }
+  .popular__container {
+    padding-right: 16px;
+  }
+  .popular__products {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 47px;
+  }
+  .popular__header {
+    margin-bottom: 28px;
   }
 }
 

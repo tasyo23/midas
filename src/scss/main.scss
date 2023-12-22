@@ -103,7 +103,17 @@ h2,
     padding: 0 20px;
   }
 }
-
+@media screen and (max-width: 767px){
+  .container {
+    padding: 0 16px;
+  }
+  h2,
+  .h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 45px
+  }
+}
 
 @import "./blocks/header";
 @import "./blocks/footer";
